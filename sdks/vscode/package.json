@@ -1,17 +1,17 @@
 {
-  "name": "opencode",
-  "displayName": "opencode",
-  "description": "opencode for VS Code",
-  "version": "1.14.19",
-  "publisher": "sst-dev",
+  "name": "mimo-code",
+  "displayName": "MiMo-Code",
+  "description": "MiMo Code AI assistant for VS Code — sidebar integration with auto-download",
+  "version": "0.1.0",
+  "publisher": "Roger-Han",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anomalyco/opencode"
+    "url": "https://github.com/XiaomiMiMo/MiMo-Code"
   },
   "license": "MIT",
   "icon": "images/icon.png",
   "galleryBanner": {
-    "color": "#000000",
+    "color": "#1e1e1e",
     "theme": "dark"
   },
   "engines": {
@@ -20,13 +20,38 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "mimo",
+    "ai",
+    "coding",
+    "assistant",
+    "chat"
+  ],
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "mimocode",
+          "title": "MiMo Code",
+          "icon": "images/button-dark.svg"
+        }
+      ]
+    },
+    "views": {
+      "mimocode": [
+        {
+          "type": "webview",
+          "id": "mimocode.sidebar",
+          "name": "MiMo Code"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "opencode.openTerminal",
-        "title": "Open opencode",
+        "title": "Open MiMo Code (Terminal)",
         "icon": {
           "light": "images/button-dark.svg",
           "dark": "images/button-light.svg"
@@ -34,7 +59,7 @@
       },
       {
         "command": "opencode.openNewTerminal",
-        "title": "Open opencode in new tab",
+        "title": "Open MiMo Code in new tab",
         "icon": {
           "light": "images/button-dark.svg",
           "dark": "images/button-light.svg"
@@ -42,7 +67,7 @@
       },
       {
         "command": "opencode.addFilepathToTerminal",
-        "title": "Add Filepath to Terminal"
+        "title": "Add Filepath to MiMo Code"
       }
     ],
     "menus": {
@@ -56,7 +81,7 @@
     "keybindings": [
       {
         "command": "opencode.openTerminal",
-        "title": "Run opencode",
+        "title": "Open MiMo Code (Terminal)",
         "key": "cmd+escape",
         "mac": "cmd+escape",
         "win": "ctrl+escape",
@@ -64,7 +89,7 @@
       },
       {
         "command": "opencode.openNewTerminal",
-        "title": "Run opencode",
+        "title": "Open MiMo Code in new tab",
         "key": "cmd+shift+escape",
         "mac": "cmd+shift+escape",
         "win": "ctrl+shift+escape",
@@ -72,7 +97,7 @@
       },
       {
         "command": "opencode.addFilepathToTerminal",
-        "title": "opencode: Insert At-Mentioned",
+        "title": "MiMo Code: Insert File Reference",
         "key": "cmd+alt+k",
         "mac": "cmd+alt+k",
         "win": "ctrl+alt+K",
@@ -81,14 +106,14 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "bun run package",
-    "compile": "bun run check-types && bun run lint && node esbuild.js",
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && node esbuild.js",
     "watch:esbuild": "node esbuild.js --watch",
     "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
-    "package": "bun run check-types && bun run lint && node esbuild.js --production",
+    "package": "npm run check-types && node esbuild.js --production",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "bun run compile-tests && bun run compile && bun run lint",
+    "pretest": "npm run compile-tests && npm run compile",
     "check-types": "tsc --noEmit",
     "lint": "eslint src",
     "test": "vscode-test"
