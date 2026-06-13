@@ -1,6 +1,6 @@
 # MiMo-Code VS Code Extension
 
-A Visual Studio Code extension that integrates [MiMo Code](https://github.com/XiaomiMiMo/MiMo-Code) AI assistant directly into your development workflow.
+A Visual Studio Code extension that integrates [MiMo Code](https://github.com/Zepp-Hanzj/MiMo-Code/tree/feat/vscode-webview) AI assistant directly into your development workflow.
 
 ## Features
 
