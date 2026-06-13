@@ -1,34 +1,53 @@
-# opencode VS Code Extension
+# MiMo-Code VS Code Extension
 
-A Visual Studio Code extension that integrates [opencode](https://opencode.ai) directly into your development workflow.
-
-## Prerequisites
-
-This extension requires the [opencode CLI](https://opencode.ai) to be installed on your system. Visit [opencode.ai](https://opencode.ai) for installation instructions.
+A Visual Studio Code extension that integrates [MiMo Code](https://github.com/XiaomiMiMo/MiMo-Code) AI assistant directly into your development workflow.
 
 ## Features
 
-- **Quick Launch**: Use `Cmd+Esc` (Mac) or `Ctrl+Esc` (Windows/Linux) to open opencode in a split terminal view, or focus an existing terminal session if one is already running.
-- **New Session**: Use `Cmd+Shift+Esc` (Mac) or `Ctrl+Shift+Esc` (Windows/Linux) to start a new opencode terminal session, even if one is already open. You can also click the opencode button in the UI.
-- **Context Awareness**: Automatically share your current selection or tab with opencode.
-- **File Reference Shortcuts**: Use `Cmd+Option+K` (Mac) or `Alt+Ctrl+K` (Linux/Windows) to insert file references. For example, `@File#L37-42`.
+- **Sidebar Panel**: MiMo Code appears as a sidebar view alongside Chat, Codex, and Cline — no separate window needed.
+- **Auto-Download**: The extension automatically downloads the MiMo Code server binary on first use. No manual CLI installation required.
+- **Workspace Integration**: Automatically opens your current VS Code project directory in MiMo Code.
+- **Dark Theme**: Respects your VS Code color theme.
+- **Terminal Mode**: Use `Cmd+Esc` / `Ctrl+Esc` to open MiMo Code in a split terminal as an alternative.
 
-## Support
+## Quick Start
 
-This is an early release. If you encounter issues or have feedback, please create an issue at https://github.com/anomalyco/opencode/issues.
+1. Install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Roger-Han.mimo-code)
+2. Click the **MiMo Code** icon in the Activity Bar (left sidebar)
+3. The extension will auto-download the server and load the UI
+
+## Manual CLI Installation (Optional)
+
+If you prefer to install the MiMo Code CLI manually:
+
+```bash
+npm i -g @mimo-ai/cli
+```
+
+## Keybindings
+
+| Action | Mac | Windows/Linux |
+|--------|-----|---------------|
+| Open Terminal Mode | `Cmd+Esc` | `Ctrl+Esc` |
+| Open in New Tab | `Cmd+Shift+Esc` | `Ctrl+Shift+Esc` |
+| Insert File Reference | `Cmd+Option+K` | `Alt+Ctrl+K` |
 
 ## Development
 
 1. `code sdks/vscode` - Open the `sdks/vscode` directory in VS Code. **Do not open from repo root.**
-2. `bun install` - Run inside the `sdks/vscode` directory.
+2. `npm install` - Run inside the `sdks/vscode` directory.
 3. Press `F5` to start debugging - This launches a new VS Code window with the extension loaded.
 
-#### Making Changes
+### Making Changes
 
-`tsc` and `esbuild` watchers run automatically during debugging (visible in the Terminal tab). Changes to the extension are automatically rebuilt in the background.
+The extension uses `tsc` for type checking and `esbuild` for bundling. Both run automatically during debugging.
 
 To test your changes:
 
 1. In the debug VS Code window, press `Cmd+Shift+P`
 2. Search for `Developer: Reload Window`
 3. Reload to see your changes without restarting the debug session
+
+## License
+
+MIT
