@@ -1,12 +1,12 @@
 {
   "name": "mimo-code",
   "displayName": "MiMo-Code",
-  "description": "MiMo Code AI assistant for VS Code — sidebar integration with auto-download",
-  "version": "0.1.0",
+  "description": "MiMo-Code: AI coding assistant for VS Code — sidebar webview integration with auto-terminal setup",
+  "version": "0.1.1",
   "publisher": "Roger-Han",
   "repository": {
     "type": "git",
-    "url": "https://github.com/XiaomiMiMo/MiMo-Code"
+    "url": "https://github.com/Zepp-Hanzj/MiMo-Code/tree/feat/vscode-webview"
   },
   "license": "MIT",
   "icon": "images/icon.png",
