@@ -12,7 +12,7 @@ A Visual Studio Code extension that integrates [MiMo Code](https://github.com/Ze
 
 ## Quick Start
 
-1. Install the extension from the [GitHub Releases](https://github.com/Zepp-Hanzj/MiMo-Code/releases) or build from source
+1. Install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Roger-Han.mimo-code-ai)
 2. Click the **MiMo Code** icon in the Activity Bar (left sidebar)
 3. The extension will auto-download the server and load the UI
 

@@ -1,6 +1,6 @@
 {
-  "name": "mimo-code",
-  "displayName": "MiMo-Code",
+  "name": "mimo-code-ai",
+  "displayName": "MiMo Code AI",
   "description": "MiMo-Code: AI coding assistant for VS Code — sidebar webview integration with auto-terminal setup",
   "version": "1.0.0",
   "publisher": "Roger-Han",
